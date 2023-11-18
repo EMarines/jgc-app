@@ -1,5 +1,5 @@
 <script>
-    import logo from '../lib/images/logo.png'
+    import logo from '../lib/images/logo.jpg'
 </script>
 
 <div class="hero">
@@ -9,8 +9,8 @@
                 <img src={logo} alt="Match Home">
             </div>
             <div>
-                <h2>Match Home</h2>
-                <h5>Tu Patrimonio En Buenas Manos</h5>
+                <h2>JGCapital</h2>
+                <h5>Bienvenido A Tu Casa</h5>
             </div>
 
         </div>

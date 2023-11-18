@@ -95,7 +95,7 @@
           // Envía en mensaje de agradecimiento
           $binnacle = {"date": Date.now(), "comment": $property.nameProperty, "to": $contact.telephon, "action": "Propiedad enviada: "}
           infoToBinnacle($systStatus, $binnacle)
-          msgWA = "Gracias por contactarnos. Enrique Marines, asesor de ventas en Match Home, tel. 614 540 4003, email matchhome@hotmail.com ✔ Visita matchhome.net ✔ ¡Seguro encuentras algo de interés!"
+          msgWA = "Gracias por contactarnos. Julio Marines, asesor de ventas en JGCapial, tel. 614 163 6322, email jgcapitalbienes@hotmail.com ✔ Visita jgcapital.easybroker.com"
           sendWA(msgWA)
         } else if($systStatus === "sendComm"){
           // Envía por WA lo que está en TextArea y guarda la bitácora

@@ -1,11 +1,11 @@
 
 <div class="contact">
     <h3>Contactanos</h3>
-    <p><strong>Match Home</strong></p>
-    <p>Garcia Valdéz # 2956</p>
+    <p><strong>JGCapital</strong></p>
+    <p>Fco. Villa # 5700</p>
     <p>Chihuahua, Chih.</p>
-    <p>Tel: (614) 540 4003</p>
-    <p>Email: <a href="mailto:matchhome@hotmail.com">machhome@hotmail.com</a></p>
+    <p>Tel: (614) 163 6322</p>
+    <p>Email: <a href="mailto:jgcapitalbienes@hotmail.com">jgcapitalbienes@hotmail.com</a></p>
 </div>
 
 <style>
