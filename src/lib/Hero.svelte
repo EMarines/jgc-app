@@ -1,5 +1,5 @@
 <script>
-    import logo from '../lib/images/logo.jpg'
+    import logo from '$lib/images/logo.jpg'
 </script>
 
 <div class="hero">

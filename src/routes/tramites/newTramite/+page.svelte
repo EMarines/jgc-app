@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 // @ts-nocheck
 
   import { dbContacts, dbProperties } from "../../../firebase";
@@ -121,4 +121,4 @@
   .in__sel{
 
   }
-</style>
+</style> -->

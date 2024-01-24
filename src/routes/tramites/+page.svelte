@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import { goto } from '$app/navigation';
 
    let tramites = ["Polanco/Perez", "Ramirez/Félix", "Marquez/Márquez"];
@@ -28,4 +28,4 @@
       </div>
    </div>
 </section>
-
+ -->

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 
 </script>
 
@@ -13,4 +13,4 @@
     <button>Agregar Dato</button>
     <button>Requerimientos</button>
   </div>
-</section>
+</section> -->
