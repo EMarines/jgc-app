@@ -41,6 +41,7 @@
     }
   });
 
+    // @ts-ignore
     const setTheme = (theme) => {
         document.documentElement.dataset.theme = theme;
         document.cookie = `siteTheme = ${theme}; max-age=31536000;path="/"`;
@@ -68,6 +69,7 @@
       <!-- </div> -->
 
         <ul>
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
             <div class={nav__links} id="menu" on:click={showHide} on:keypress={showHide}>
               
               <li><a href="/">Home</a></li>

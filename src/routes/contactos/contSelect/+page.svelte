@@ -208,7 +208,9 @@
           <div class="data__container">
             <div class="headTitle">
               <div class="titleIcons">
+                  <!-- svelte-ignore a11y-no-static-element-interactions -->
                   <i on:click={()=>{editContact($contact.id)}} on:keydown={()=>{}} class="fa-regular fa-pen-to-square" />
+                  <!-- svelte-ignore a11y-no-static-element-interactions -->
                   <i on:click={()=>{deleContact($contact.id)}} on:keydown={()=>{}} class="fa-regular fa-trash-can" />
                 </div>
                 <div class="titleRight">
