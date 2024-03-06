@@ -39,6 +39,9 @@ h1.title {
   font-size: 2.5em;
   font-weight: 350;
 }
+h1 , h2{
+  text-transform: capitalize;
+}
 
 h2.title {
   font-size: 2em;
@@ -69,7 +72,10 @@ h1.name {
   border-radius: 8px;
   text-decoration: none;
 }
-  
+
+
+/* inputs dessigns   */
+
 .above, .center {
   position: absolute;
   transform: translateY(-50%);
@@ -97,9 +103,40 @@ h1.name {
 .center {
   top: 50%;
   left: 6px;
-  /* border: 1px solid transparent; */
+  border: 1px solid transparent;
   opacity: 0;
 }
+
+.label__title {
+  position: relative; 
+  border: 1px solid navy;
+  border-radius: 5px;
+  padding: 5px 3px 7px 3px;
+}
+
+.in__sel {  
+  padding: 3px 0 3px 5px;
+  width: 250px;
+  border-color: 2px solid blue;
+  border-radius: 8px;
+  font-size: .8em;
+  padding: 3px;
+  font-weight: 600;
+  color: darkblue;    
+  }
+
+
+  input::placeholder{
+    color: navy;
+  }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
+
+
+
+
 
 /* iconos */
 

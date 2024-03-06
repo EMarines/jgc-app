@@ -16,7 +16,6 @@ let upRange;
  * @param {string} rng
  */
   export function setRange(rng){
-      console.log("El precio de la pripiedad es: ", rng)
       if(rng === "prm"){
         lowRange = 0, upRange=1000000                 // PRM
       }
@@ -37,16 +36,12 @@ let upRange;
         else if (rng === "sxt") {
         lowRange = 12000000, upRange=1500000000       // SXT
       } 
-      console.log(lowRange, upRange)
-      
-       
   };
   
     /**
  * @param {number} price
  */
     export function ranPrice(price){
-      console.log("El precio de la pripiedad es: ", price)
       if(price <= 1000000){
         lowRange = 0, upRange=1000000                 // PRM
       }
@@ -60,13 +55,11 @@ let upRange;
         lowRange = 5000001, upRange=8000000           // CRT
       }
       else if (price <= 12000000) {                   // QNT
-        console.log("si")
         return rng = "qnt"
       }
         else if (price > 12000000) {
         lowRange = 12000000, upRange=1500000000       // SXTre
       } 
-      console.log("el rango es: ", )
       return 
     };
 
@@ -80,11 +73,14 @@ let upRange;
       }
       else if (price <= 2500000) {
         rng = "SGN"            // SGN
+        // console.log("sgn");
       }
       else if (price <= 5000000) {
+        // console.log("trc");
         rng = "TRC"            // TRC
       }
       else if (price <= 8000000) {
+        // console.log("crt");
         rng = "CRT"            // CRT
       }
       else if (price <= 12000000) {   // QNT
@@ -93,6 +89,9 @@ let upRange;
         else if (price > 12000000) {
         rng = "SXT"            // SXT
       } 
+      if(rng === undefined){
+        rng = ""
+      }
       return rng     
     };
 

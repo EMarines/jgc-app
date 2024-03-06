@@ -1,3 +1,4 @@
+// @ts-nocheck
 
 /**
  * @param {number} number
@@ -19,6 +20,26 @@ export function toTele(tel){
 		let res2 = tel.slice(3, 6)
 		let res3 = tel.slice(6, 10)
 		return (`${res1} ${res2} ${res3}`)		
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+export function cleanNumber(numToClean){
+	try {
+		let newNumber = numToClean.replaceAll(",", "").replaceAll(" ", "").replaceAll("-", "").replaceAll("(", "").replaceAll(")", "");
+		return newNumber;
+
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+export function cleanName(nomToClean){
+	try {
+		let newNomber = nomToClean.trim();
+		return newNomber;
+
 	} catch (error) {
 		console.log(error);
 	}

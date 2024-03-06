@@ -114,12 +114,12 @@
       {#if register}
       <div>
         <p>Tienes Cuenta?</p>
-        <p on:click={handleRegister} on:keydown={()=>{}}>Login</p>
+        <button on:click={handleRegister} on:keydown={()=>{}}>Login</button>
       </div>
       {:else}
       <div>
         <p>No Tienes Cuenta?</p>
-        <p on:click={handleRegister} on:keydown={()=>{}}>Registrate</p>
+        <button on:click={handleRegister} on:keydown={()=>{}}>Registrate</button>
       </div>
       {/if}
     </div>

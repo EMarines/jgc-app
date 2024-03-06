@@ -11,7 +11,6 @@
     import CardProperty from '$lib/components/CardProperty.svelte';
     import Search from '$lib/components/Search.svelte';
     import propadd from '$lib/jsonProperties.json'
-    // import { collection, addDoc, deleteDoc, getDoc, getDocs, doc, updateDoc, onSnapshot} from 'firebase/firestore';
 
 
   // Declarations
@@ -51,10 +50,14 @@
   // Search property by name
     function searProp() {
       return propToRender = $currPropList.filter((propety) => {
-        let contInfo = (propety.nameProperty + " " + propety.colonia + " " + propety.claveEB).toLowerCase();
+        let contInfo = (propety.nameProperty + " " + propety.colonia + " " + propety.claveEB).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         return contInfo.includes(searchTerm.toLowerCase());
       });  
     };
+
+    const removeAccents = (str) => {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
 
     function addPropertyS() {
       propadd.forEach(async prop => {       
@@ -80,6 +83,7 @@
       <div class="card__container">
 
         {#each propToRender as prop}
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
           <div class="card__prop"on:click={seleProperty(prop)} on:keydown={()=>{}}>
             <CardProperty {prop} />
           </div>
@@ -125,18 +129,17 @@
       gap: 10px;
   }
 
-  .card__prop { 
+  /* .card__prop { 
       display: flex; 
       flex-direction: column;   
       width: 200px;
       height: 250px;     
-      color: grey;
       border: 1px solid grey;
       border-radius: 5px;
       justify-content: center;
       padding: 8px;
       gap: 4px;
-    }
+    } */
 
     @media(max-width: 400px) {
       .card__container {

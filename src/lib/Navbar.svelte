@@ -64,7 +64,7 @@
   <nav>
     <div class="container">
       <!-- <div class="nav__bugger"> -->
-        <h1>MatchHome</h1>  
+        <h1>JGCapital</h1>  
         <button  class="nav__target" on:click={showHide}><i class="fa-solid fa-bars nav__icon"></i></button>
       <!-- </div> -->
 

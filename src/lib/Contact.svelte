@@ -3,6 +3,7 @@
     <h3>Contactanos</h3>
     <p><strong>JGCapital</strong></p>
     <p>Fco. Villa # 5700</p>
+    <p>Col. Panamericana</p>
     <p>Chihuahua, Chih.</p>
     <p>Tel: (614) 163 6322</p>
     <p>Email: <a href="mailto:jgcapitalbienes@hotmail.com">jgcapitalbienes@hotmail.com</a></p>

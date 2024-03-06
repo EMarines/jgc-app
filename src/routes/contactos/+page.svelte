@@ -53,7 +53,7 @@
   // Search Contact by name, lastname and telephon
       function searCont() {
         return contToRender = $currContList.filter((contact) => {
-          let contInfo = (contact.name + " " + contact.lastname + contact.telephon).toLowerCase();
+          let contInfo = (contact.name + " " + contact.lastname + contact.telephon).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
           return contInfo.includes(searchTerm.toLowerCase());
         });  
       };
@@ -75,6 +75,7 @@
       
         <div class="cards__container">
           {#each contToRender as cont}
+            <!-- svelte-ignore a11y-no-static-element-interactions -->
             <div class="card__container" on:click={seleContact(cont)} on:keydown={()=>{}}>
               <CardContact {cont}/>         
             </div>
@@ -123,7 +124,7 @@
       height: 130px;   
       justify-content: center;
       align-items: center;  
-      color: grey;
+      /* color: grey; */
       border: 1px solid grey;
       border-radius: 5px;
       padding: 8px;

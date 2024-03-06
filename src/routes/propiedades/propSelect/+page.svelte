@@ -1,6 +1,7 @@
 <script>
 	// @ts-nocheck
-	// Importaciones
+	// Importaciones y declaraciónes
+  	import { sendWhatsApp, closeWindow } from '$lib/functions/sendWhatsApp';
 		import { db, dbBinnacle, dbContacts } from '../../../firebase';
 		import { property, contact, binnacle, systStatus, currPropList, currContList, currBinnList } from '$lib/stores/store';
 		import { toComaSep } from '$lib/functions/format.js';
@@ -15,39 +16,48 @@
 		import { onDestroy } from 'svelte';
 		import CardContact from '$lib/components/CardContact.svelte'
 		import { sortBinnacle } from '$lib/functions/sort.js'
+		import { formatDate } from '$lib/functions/dateFunctions.js'
+		import { capitalize } from '$lib/functions/capitalize.js'
+		
+			let saludoHora = '';
+			let modeAction = '';
+			let poroShowTo =["Por_Enviar", "Ya_Se_Envió", "Posobles_Interesados" ];
+			let contInterested = "";
+			let contInterest = [];
+			let contToRender = [];
+			let contCheck = [];
+			let contToSend = {};
+			let sent =[];
+			let toSend = [];
+			let tosend =[];
+			let res = [];
+			let msgToShow = "Contactos les puede interesar esta propiedad";
+			let show__contacts = false;
+			let showBtn = false;
+			let sig = 0;
+			let mensaje ="";
 
-	// declaraciones
-		let saludoHora = '';
-		let modeAction = '';
-		let poroShowTo =["Por_Enviar", "Ya_Se_Envió", "Posobles_Interesados" ];
-    let contInterested = "";
-		let contInterest = [];
-		let contToRender = [];
-		let conts = [];
-    let sent =[];
-    let toSend = [];
-    let tosend =[];
-    let res = [];
-    let msg = "Contactos les puede interesar esta propiedad";
-		let show__contacts = false;
-    // let seeCont = true;
-    // let bitacora = dbBinnacle;
+			$: contFalt = contIntToSend - sig;
+			$: contIntToSend = contCheck.length;
+			$: contInitial = contToRender;
 
+			
 
+  
 	// Renderiza currBinnList
 			const unsubB = onSnapshot(
-           collection(db, "binnacles"),
-           (querySnapshot) => {
-              $currBinnList = querySnapshot.docs.map(doc => {
-                 return{...doc.data(), id: doc.id}
-              })
-              return sortBinnacle($currBinnList)
-           },
-              (err) =>{
-                 console.log(err);
-           }
-        );           
-        onDestroy(unsubB)
+				collection(db, "binnacles"),
+					(querySnapshot) => {
+						$currBinnList = querySnapshot.docs.map(doc => {
+							return{...doc.data(), id: doc.id}
+						})
+						return sortBinnacle($currBinnList)
+					},
+						(err) =>{
+							console.log(err);
+					}
+			);           
+			onDestroy(unsubB)
 
 	// Edty Property
 		function editProp() {
@@ -58,13 +68,11 @@
 	//  Delete Property
 		async function deleProperty() {
 			if (confirm('Deseas eleiminar definitivamente la propiedad?')) {
-				// $systStatus = "propDeleting"
 				await deleteDoc(doc(db, 'properties', $property.id));
-				$property = [];
+				goto('/propiedades');
 			} else {
 				return;
 			}
-			goto('/propiedades');
 		}
 
 	// Cancel
@@ -72,16 +80,24 @@
 			$property = [];
 			goto('/propiedades');
 		}
+		
+		function cancel(){
+			$systStatus = "";
+			goto('/propiedades');
+
+		}
 
 	// Separar contactos agrupados
 	 	function listToRender(){ 
+			contCheck = [];
+			showBtn = true
 			contInterest = filtPropContInte($property, $currContList)
 			if(contInterested === "Posobles_Interesados"){
-					msg = "Contactos Les Puede Interesar Esta Propiedad"
+				msgToShow = "Contactos Les Puede Interesar Esta Propiedad"
 					contToRender = contInterest
 			} else if(contInterested === "Por_Enviar"){
 					toSend=[];
-					msg = "No Se Les Ha Enviado Esta Propieadad"
+					msgToShow = "Pendiente Para Enviar Esta Propieadad"
 					res =  $currBinnList.filter(item =>
 					item.comment === $property.nameProperty)
 					const contsT = res.map(doc => doc.to)
@@ -89,7 +105,7 @@
 					contToRender = toSend
 			} else if(contInterested === "Ya_Se_Envió"){
 					sent=[];
-					msg = "Ya se les envió esta propiedad"
+					msgToShow = "Ya se les envió esta propiedad"
 					res = $currBinnList.filter(item =>
 					item.comment === $property.nameProperty)
 					$currContList.filter((cont) =>{
@@ -105,6 +121,7 @@
 
 	// Muestra listado de contactos interesados
 		function findCustomers() {
+			contInterested = "Por_Enviar"
 			listToRender($property, $currContList)
 			show__contacts = !show__contacts
 			$systStatus = "sendPropToContacts"
@@ -113,33 +130,53 @@
 	//  Send WhatshApp with Message and Property
 		async function sendWA() {
 			saludoHora = diaTarde();
-			let msg = `${$contact.name}. ${saludoHora}  Te envío esta casa que creo te va a interesar. ¡Saludos!`;
-			let link = `https://api.whatsapp.com/send?phone=52${$contact.telephon}&text=${$property.urlProp}         🏠 ${msg} 👍 `;
-			window.open(link, 'ventana1', 'width=350,height=350,scrollbars=NO');
-			 	$binnacle = {"date": Date.now(), "comment": $property.nameProperty, "to": $contact.telephon, "action": "Propiedad enviada: "}
-				try {
-					const binnacleToAdd = collection(db, "binnacles")
-					await addDoc(binnacleToAdd, $binnacle);					
-				} catch (error) {
-				}
+			$contact = contToSend
+			let contacto = capitalize($contact.name)
+			let msg = `${$property.urlProp}    ${contacto}. ${saludoHora}  ${mensaje}`;
+			let tel = $contact.telephon
+			sendWhatsApp(tel, msg)
+			$binnacle = {"date": Date.now(), "comment": $property.nameProperty, "to": $contact.telephon, "action": "Propiedad enviada: "}
+			try {
+				const binnacleToAdd = collection(db, "binnacles")
+				await addDoc(binnacleToAdd, $binnacle);					
+			} catch (error) {
+				console.log(error);
+			};
 
-				if($systStatus === "sendPropToContacts"){
-					$contact = "";
-					conts = "";
-					// $systStatus = "";
-				
-					listToRender($property, $currContList)
-				}
+			if($systStatus === "sendPropToContacts"){
+				$contact = "";
+				listToRender($property, $currContList)
+			}
 		}
 
-	// Le da el valor del contacto seleccionado para envar prop por WA a $contact
-			function contSelected(cont) {
-				$contact = conts[0];
-				if(conts.length > 1){
-					alert("no puedesseleccionar más de uno, borra la segunda selección")
-				}
+	// Envía en bucle la propiedad a uno o varios contactos
+		function sendProperty() {
+			if(mensaje === ""){
+				alert("Tienes que escribir un mensaje para enviar las propiedades")
+				return
 			}
+			contToSend = contCheck[sig]
+			contFalt = contCheck.length - (sig + 1)
+			$systStatus = "sendProps"
+			sendWA(contToSend)
+			if ( contIntToSend === sig + 1 ) {
+				setTimeout ( function(){
+					$systStatus = "";
+					contCheck = [];
+					contIntToSend = 0;
+					show__contacts = false;
+					sig = 0;
+					contFalt = 0;
+					return
+				}, 2000);
+			};
+				sig ++
+		};
 
+			// Selecciona todos los contactos o los deselecciona
+		function selectAll(e){
+			contCheck = e.target.checked ? [...contToRender] : [];
+		}
 
 </script>
 
@@ -158,9 +195,12 @@
 
 				<div class="prop__card">
 					<div class="prop__info">
-						<h1 class="title">Colonia {$property.colonia} {$property.selectTP} en {$property.selecTO}</h1>
+						<div class="propTitle">
+							<h1 class="title">{$property.selectTP} en {$property.colonia} en {$property.selecTO}</h1>
+						</div>
 						<div class="prop__price">
 							<h2>Precio $ {toComaSep(Number($property.price))}.</h2>
+							<p class="alta__prop">Alta: {formatDate($property.createdAt)}</p>
 						</div>
 						<div class="prop__cont">
 							<div class="prop__features">
@@ -190,28 +230,46 @@
 						</div>
 					</div>
 					<div class="actions">
-						<i on:click={() => {editProp($property.id)}} on:keydown={() => {}} class="fa-regular fa-pen-to-square" />
+						<!-- svelte-ignore a11y-interactive-supports-focus -->
+						<i on:click={() => {editProp($property.id)}} on:keydown={() => {}} class="fa-regular fa-pen-to-square" role="button" />
+						<!-- svelte-ignore a11y-no-static-element-interactions -->
 						<i on:click={() => {deleProperty($property.id)}}	on:keydown={() => {}}	class="fa-regular fa-trash-can"	/>
 					</div>
 				</div>
 			</div>
 	<!-- Botones -->
 			<div class="btn__options">
-				<BtnWA on:click={sendWA} />
-				<BtnFind on:click={findCustomers} />
-				<BtnCancel on:click={actCancel} />
-				<BtnFollLink />
+				{#if $systStatus !== "sendPropToContacts"} 
+					<BtnWA on:click={sendWA} />
+					<BtnFind on:click={findCustomers} />
+					<BtnCancel on:click={actCancel} />
+					<BtnFollLink />
+				{:else} 
+					<button on:click={cancel}>
+						Regresar
+						<!--  -->
+					</button>
+				{/if}
 			</div>
 
 	<!-- Muestra opciones para buscar contactos interesados -->
 			{#if show__contacts}
 				<div class="mainContainer">
-					<div class="sect__Title">
-						<h1>A {contToRender > 0 ? contToRender.length : contInterest.length} {msg}</h1>
+					<div class="sel__msg">
+							<textarea type="text" bind:value={mensaje} placeholder="Escribe el mensaje a enviar"/>
+					</div>
+					
+					<div class="sect__Title">					
+						{#if contToRender.length === 0}
+							<h1>No hay contactos para enviar</h1>
+						{:else }
+							<h1>A {contInitial.length} {msgToShow}</h1>
+						{/if}					
+
 						<div class="opti__cont">
 							{#each poroShowTo as list}
 									<label>
-										<input type=radio bind:group={contInterested} value={list} on:change={listToRender}>
+										<input type="radio" bind:group={contInterested} value={list} on:change={listToRender}>
 										{list.replaceAll("_", "  ")}
 									</label>
 							{/each}
@@ -220,10 +278,18 @@
 				</div>
 				
 	<!-- Muestra los contactos a los que le puede interesar la propiedad -->
+				<div class="btn__send">
+					{#if showBtn}
+						<button id="Evio_prop_selec" class="send__Prop" on:click={sendProperty}>{`Total para enviar ${contIntToSend}. faltan ${contFalt}`}</button>
+						<label>
+							<input type="checkbox" on:change={selectAll}> Seleccionar todos
+						</label>
+						{/if}
+				</div>
 				<div class="cards__container">
 					{#each contToRender as cont}
 					<div class="card__container">
-						<input type="checkbox" value={cont} name={cont}  bind:group={conts} on:change={contSelected}>
+						<input type="checkbox" value={cont} name={cont}  bind:group={contCheck} >
 						<CardContact {cont}/>         
 					</div>
 					{/each}        
@@ -316,6 +382,8 @@
 	.prop__price {
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		gap: 15px;
 	}
 	.prop__cont {
 		display: flex;
@@ -346,6 +414,23 @@
 		flex-wrap: wrap;
 	}
 
+	.sel__msg {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.sel__msg textarea {
+		width: 650px;
+		height: 50px;
+		font-size: 1rem;
+		background: transparent;
+		color: white;
+			}
+
 	.sect__Title {
 		display: flex;
 		flex-direction: column;
@@ -368,11 +453,18 @@
 		gap: 8px;
 	}
 
-	/* .card__container input{
-		position: absolute;
-		top: 10px;
-		left: 10px;
-	} */
+	.btn__send {
+		display: flex;
+		justify-content: space-evenly;	
+		padding: 10px;
+		/* background: yellowgreen;	 */
+	}
+
+	.send__Prop {
+		background: green;
+		padding: 5px 15px;
+		border-radius: 5px;
+	}
 
 	.card__container { 
       display: flex; 
@@ -426,6 +518,9 @@
 			top: 15px;
 			left: 15px;
     }
+		.sel__msg textarea {	
+			width: 100%;
+		}
   
 	}
 </style>

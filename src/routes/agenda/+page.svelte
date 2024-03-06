@@ -153,7 +153,9 @@
                   {#if mostActions}
                     <td class="td__icons">
                       <i class="fa-sharp fa-regular fa-square-check"></i>
+                      <!-- svelte-ignore a11y-no-static-element-interactions -->
                       <i on:click={editTodo(item)} on:keydown={()=>{}} class="fa-regular fa-pen-to-square" />
+                      <!-- svelte-ignore a11y-no-static-element-interactions -->
                       <i on:click={deleteTodo(item)} on:keydown={()=>{}} class="fa-regular fa-trash-can" />
                       </td>
                   {/if}
@@ -259,7 +261,7 @@
   td {
     font-size: .8rem;
     font-weight: 300;
-    color: rgb(137, 136, 136);
+    /* color: rgb(137, 136, 136); */
     padding: 8px;
     border: 1px solid rgb(42, 41, 41, .3);
   }
@@ -271,6 +273,7 @@
 
   .td__task {
     width: 150px;
+    text-transform: capitalize;
   }
 
   @media(max-width: 400px){

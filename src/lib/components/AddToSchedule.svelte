@@ -66,6 +66,7 @@
 
    <!-- <body> -->
 
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div class="background" transition:fade on:click ={close} on:keydown={()=>{}}/>
          <div class="pop__up" transition:fly>         
             <div>

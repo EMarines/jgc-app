@@ -1,0 +1,600 @@
+{
+  "pagination": {
+    "limit": 20,
+    "page": 1,
+    "total": 206,
+    "next_page": "https://api.easybroker.com/v1/properties?page=2"
+  },
+  "content": [
+    {
+      "public_id": "EB-CY1174",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031174/15454879/EB-CY1174.png?version=1555606048",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031174/15454879/EB-CY1174_thumb.png?version=1555606048",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 450000,
+          "currency": "MXN",
+          "formatted_amount": "$450,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-CY1220",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031220/15455508/EB-CY1220.png?version=1555608683",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031220/15455508/EB-CY1220_thumb.png?version=1555608683",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 2400000,
+          "currency": "MXN",
+          "formatted_amount": "$2,400,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-CY1228",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031228/15455551/EB-CY1228.png?version=1555608776",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031228/15455551/EB-CY1228_thumb.png?version=1555608776",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 1200000,
+          "currency": "MXN",
+          "formatted_amount": "$1,200,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-CY1229",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031229/15455584/EB-CY1229.png?version=1555608843",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031229/15455584/EB-CY1229_thumb.png?version=1555608843",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 4000000,
+          "currency": "MXN",
+          "formatted_amount": "$4,000,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-CY1232",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031232/15455595/EB-CY1232.png?version=1555608881",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031232/15455595/EB-CY1232_thumb.png?version=1555608881",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 6000000,
+          "currency": "MXN",
+          "formatted_amount": "$6,000,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-CY1233",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031233/15455598/EB-CY1233.png?version=1555608919",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031233/15455598/EB-CY1233_thumb.png?version=1555608919",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 10000000,
+          "currency": "MXN",
+          "formatted_amount": "$10,000,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-CY1234",
+      "title": "ESTÁS VENDIENDO TU CASA? Aquí estará anunciándose tu casa.",
+      "title_image_full": "https://assets.easybroker.com/property_images/1031234/15455600/EB-CY1234.png?version=1555608981",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/1031234/15455600/EB-CY1234_thumb.png?version=1555608981",
+      "location": "San Felipe I, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 14000000,
+          "currency": "MXN",
+          "formatted_amount": "$14,000,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Casa",
+      "lot_size": 0,
+      "construction_size": 0,
+      "updated_at": "2023-09-04T12:50:58-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": false,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OS1603",
+      "title": "Terreno  Habitacional en Venta, en Puerta Real.  LIBRE DE GRAVAMEN.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4091603/67692580/EB-OS1603.png?version=1698343000",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4091603/67692580/EB-OS1603_thumb.png?version=1698343000",
+      "location": "Puerta Real, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 1200000,
+          "currency": "MXN",
+          "formatted_amount": "$1,200,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Terreno",
+      "lot_size": 243,
+      "construction_size": 0,
+      "updated_at": "2023-10-30T18:47:53-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OK3494",
+      "title": "Terreno Comercial en Venta,  Sobre Vialidad los Nogales",
+      "title_image_full": "https://assets.easybroker.com/property_images/4013494/66250878/EB-OK3494.png?version=1695060056",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4013494/66250878/EB-OK3494_thumb.png?version=1695060056",
+      "location": "20 Aniversario, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 2200000,
+          "currency": "MXN",
+          "formatted_amount": "$2,200,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Terreno comercial",
+      "lot_size": 589,
+      "construction_size": 0,
+      "updated_at": "2023-10-30T18:54:40-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OW0577",
+      "title": "Terreno en Venta en Ave. Principal.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4130577/68416016/EB-OW0577.png?version=1700161449",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4130577/68416016/EB-OW0577_thumb.png?version=1700161449",
+      "location": "Parque Industrial Impulso VII y VIII, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 130,
+          "currency": "USD",
+          "formatted_amount": "US$ 130",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "square_meter"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking_spaces": null,
+      "property_type": "Terreno comercial",
+      "lot_size": 8000,
+      "construction_size": 0,
+      "updated_at": "2023-11-16T13:04:31-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": true
+    },
+    {
+      "public_id": "EB-OF1287",
+      "title": "Residencia en Venta en la Cañada, Con Alberca.",
+      "title_image_full": "https://assets.easybroker.com/property_images/3961287/65261522/EB-OF1287.png?version=1692728616",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/3961287/65261522/EB-OF1287_thumb.png?version=1692728616",
+      "location": "La Cañada, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 16500000,
+          "currency": "MXN",
+          "formatted_amount": "$16,500,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        },
+        {
+          "type": "rental",
+          "amount": 40000,
+          "currency": "MXN",
+          "formatted_amount": "$40,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking_spaces": 7,
+      "property_type": "Casa",
+      "lot_size": 750,
+      "construction_size": 674,
+      "updated_at": "2023-11-24T14:35:11-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OG2953",
+      "title": "Casa en Venta en Aldabas, en Fracc.  Privado.",
+      "title_image_full": "https://assets.easybroker.com/property_images/3972953/65481329/EB-OG2953.png?version=1693251205",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/3972953/65481329/EB-OG2953_thumb.png?version=1693251205",
+      "location": "Las Aldabas I a La IX, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 2200000,
+          "currency": "MXN",
+          "formatted_amount": "$2,200,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking_spaces": 1,
+      "property_type": "Casa",
+      "lot_size": 126,
+      "construction_size": 157,
+      "updated_at": "2023-11-24T14:35:30-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OH7796",
+      "title": "Casa en Venta en Las Aldabas, Frente a Parque",
+      "title_image_full": "https://assets.easybroker.com/property_images/3987796/65760293/EB-OH7796.png?version=1693876149",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/3987796/65760293/EB-OH7796_thumb.png?version=1693876149",
+      "location": "Las Aldabas I a La IX, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 1950000,
+          "currency": "MXN",
+          "formatted_amount": "$1,950,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking_spaces": 2,
+      "property_type": "Casa",
+      "lot_size": 126,
+      "construction_size": 121,
+      "updated_at": "2023-11-24T14:35:53-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OL1220",
+      "title": "Local en Renta en San Felipe, de un Piso.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4021220/66396049/EB-OL1220.png?version=1695322236",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4021220/66396049/EB-OL1220_thumb.png?version=1695322236",
+      "location": "San Felipe IV, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "rental",
+          "amount": 15900,
+          "currency": "MXN",
+          "formatted_amount": "$15,900",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": 1,
+      "parking_spaces": 2,
+      "property_type": "Local comercial",
+      "lot_size": 0,
+      "construction_size": 80,
+      "updated_at": "2023-11-24T14:36:45-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OL1276",
+      "title": "Oficina en Renta en San Felipe, de un Piso.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4021276/66396641/EB-OL1276.png?version=1695322686",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4021276/66396641/EB-OL1276_thumb.png?version=1695322686",
+      "location": "San Felipe VI, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "rental",
+          "amount": 11900,
+          "currency": "MXN",
+          "formatted_amount": "$11,900",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": null,
+      "bathrooms": 1,
+      "parking_spaces": 2,
+      "property_type": "Local comercial",
+      "lot_size": 0,
+      "construction_size": 60,
+      "updated_at": "2023-11-24T14:36:45-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OL7607",
+      "title": "Casa en Renta en San Felipe",
+      "title_image_full": "https://assets.easybroker.com/property_images/4027607/66511312/EB-OL7607.png?version=1695668746",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4027607/66511312/EB-OL7607_thumb.png?version=1695668746",
+      "location": "San Felipe III, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "rental",
+          "amount": 25000,
+          "currency": "MXN",
+          "formatted_amount": "$25,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking_spaces": 4,
+      "property_type": "Casa",
+      "lot_size": 317,
+      "construction_size": 335,
+      "updated_at": "2023-11-24T14:36:57-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OM4930",
+      "title": "Casa en Venta en Cumbres del Sur II, con Recámara en PB.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4034930/66648339/EB-OM4930.png?version=1695924018",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4034930/66648339/EB-OM4930_thumb.png?version=1695924018",
+      "location": "Cumbres del Sur II, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 1950000,
+          "currency": "MXN",
+          "formatted_amount": "$1,950,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "parking_spaces": 2,
+      "property_type": "Casa",
+      "lot_size": 148,
+      "construction_size": 238,
+      "updated_at": "2023-11-24T14:37:10-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-ON1173",
+      "title": "Granja en Venta, Con Alberca, Carretera Aldama",
+      "title_image_full": "https://assets.easybroker.com/property_images/4041173/66766539/EB-ON1173.png?version=1696272063",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4041173/66766539/EB-ON1173_thumb.png?version=1696272063",
+      "location": "Valle de Chihuahua, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 3134000,
+          "currency": "MXN",
+          "formatted_amount": "$3,134,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking_spaces": 10,
+      "property_type": "Quinta",
+      "lot_size": 2010,
+      "construction_size": 414,
+      "updated_at": "2023-11-24T14:37:19-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OO9677",
+      "title": "Casa en Venta en la Tierra y  Libertad, de un Piso, con Amplio Terreno.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4059677/67113684/EB-OO9677.png?version=1697050543",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4059677/67113684/EB-OO9677_thumb.png?version=1697050543",
+      "location": "Tierra y Libertad, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 1820000,
+          "currency": "MXN",
+          "formatted_amount": "$1,820,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking_spaces": 3,
+      "property_type": "Casa",
+      "lot_size": 346,
+      "construction_size": 131,
+      "updated_at": "2023-11-24T14:37:52-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    },
+    {
+      "public_id": "EB-OQ3947",
+      "title": "Casa en Venta al Norte, en Valle de San Pedro.",
+      "title_image_full": "https://assets.easybroker.com/property_images/4073947/67365351/EB-OQ3947.png?version=1697650772",
+      "title_image_thumb": "https://assets.easybroker.com/property_images/4073947/67365351/EB-OQ3947_thumb.png?version=1697650772",
+      "location": "Valle de San Pedro, Chihuahua, Chihuahua",
+      "operations": [
+        {
+          "type": "sale",
+          "amount": 2588000,
+          "currency": "MXN",
+          "formatted_amount": "$2,588,000",
+          "commission": {
+            "type": "percentage"
+          },
+          "unit": "total"
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking_spaces": 2,
+      "property_type": "Casa",
+      "lot_size": 120,
+      "construction_size": 155,
+      "updated_at": "2023-11-24T14:38:22-06:00",
+      "agent": "Enrique Marines",
+      "show_prices": true,
+      "share_commission": false
+    }
+  ]
+}

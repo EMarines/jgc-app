@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 // @ts-nocheck
 
   import { dbContacts, dbProperties } from "../../../firebase";
@@ -81,6 +81,7 @@
     <input bind:value = {searchTermC} on:input={findContact(searchTermC)} on:keydown={()=>{}} id="contact" placeHolder="Contacto" />
       <div class="contSelect">
         {#each contToRender as cont}
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
           <div class="contSelec" on:dblclick={contSelec(cont)}>
             <h3>{cont.name} {cont.lastname}</h3>
           </div>
@@ -91,6 +92,7 @@
         <input bind:value = {searchTermP} on:input={findProperty(searchTermP)} on:keydown={()=>{}} id="property" placeHolder="Propiedades"/>
           <div>
             {#each propToRender as prop}
+              <!-- svelte-ignore a11y-no-static-element-interactions -->
               <div class="contSelec" on:dblclick={propSelec(prop)}>
                 <h3>{prop.nameProperty} {prop.claveEB}</h3>
               </div>
@@ -118,7 +120,5 @@
 </section>
 
 <style>
-  .in__sel{
-
-  }
-</style> -->
+ 
+</style>

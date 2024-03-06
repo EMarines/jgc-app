@@ -49,7 +49,9 @@
       <div class="todo">
         {index+1}. {todo}
       <div class="actions">
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <i on:click={()=>{editTodo(index)}} on:keydown={()=>{}} class="fa-regular fa-pen-to-square" />
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
           <i on:click={()=>{deleteTodo(index)}} on:keydown={()=>{}} class="fa-regular fa-trash-can" />
       </div>
       </div>

@@ -1,12 +1,12 @@
 <script>
-    import logo from '$lib/images/logo.png'
+    import logo from '$lib/images/logo.svg'
 </script>
 
 <div class="hero">
     <div class="container">
         <div class="header cabezal">
             <div class="logo">
-                <img src={logo} alt="JGCapital">
+                <img src={logo} alt="JGCapital" >
             </div>
             <div>
                 <h2>JGCapital</h2>
